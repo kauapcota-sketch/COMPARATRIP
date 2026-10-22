@@ -1,173 +1,179 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Comparatrip – Ofertas de viagens</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="home.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>comparatrip - Encontre sua viagem</title>
+  
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
-<header>
-  <a class="logo" href="#">compara<span>trip</span></a>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Destinos</a>
-    <a href="#" class="active">Ofertas</a>
-    <a href="#">Sobre nós</a>
-  </nav>
-  <div class="header-right">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
-    <button class="btn-conta">Conta</button>
-  </div>
-</header>
-
-<section class="hero">
-  <h1><em>Ofertas</em> de viagens</h1>
-  <p>Encontre os melhores preços para sua próxima aventura.</p>
-</section>
-
-<form class="search" onsubmit="return false">
-  <div class="field">
-    <svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-12a7 7 0 10-14 0c0 5.800 7 12 7 12z"/><circle cx="12" cy="9" r="2.500"/></svg>
-    <div style="flex:1"><label>Destino</label>
-      <select><option>Qualquer destino</option><option>Paris</option><option>Lisboa</option></select></div>
-  </div>
-  <div class="field">
-    <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
-    <div style="flex:1"><label>Data</label>
-      <select><option>Qualquer período</option><option>Maio/2025</option></select></div>
-  </div>
-  <div class="field">
-    <svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="3"/><path d="M9 7V4h6v3"/></svg>
-    <div style="flex:1"><label>Tipo de viagem</label>
-      <select><option>Qualquer tipo</option><option>Praia</option><option>Cidade</option></select></div>
-  </div>
-  <button class="btn-filtrar" type="submit">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3 5h18l-7 8v6l-4-2v-4z"/></svg>
-    Filtrar
-  </button>
-</form>
-
-<main>
-  <!-- Filtros -->
-  <aside>
-    <div class="group">
-      <h3><svg viewBox="0 0 24 24"><path d="M3 12l9-9h9v9l-9 9z"/><circle cx="16" cy="8" r="1.500"/></svg>Destaques</h3>
-      <label class="check"><input type="checkbox" checked> Com desconto</label>
-      <label class="check"><input type="checkbox"> Última chance</label>
-      <label class="check"><input type="checkbox"> Melhores avaliações</label>
+  
+  <header>
+    <div class="logo">
+      <i class="fa-solid fa-plane"></i> compara<span>trip</span>
     </div>
-    <div class="group">
-      <h3><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.500 9.500c0-1 1-1.500 2.500-1.500s2.500.7 2.500 1.700-1 1.500-2.500 1.800-2.500.8-2.500 1.800 1 1.700 2.500 1.700 2.500-.5 2.500-1.500"/></svg>Faixa de preço</h3>
-      <label class="check"><input type="checkbox"> Até R$ 2.000</label>
-      <label class="check"><input type="checkbox"> R$ 2.001 – R$ 4.000</label>
-      <label class="check"><input type="checkbox"> R$ 4.001 – R$ 7.000</label>
-      <label class="check"><input type="checkbox"> Acima de R$ 7.000</label>
+    <nav>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Destinos</a></li>
+        <li><a href="#">Ofertas</a></li>
+        <li><a href="#">Sobre nós</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="btn-icon"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <button class="btn-account"><i class="fa-regular fa-user"></i> Conta</button>
     </div>
-    <div class="group">
-      <h3><svg viewBox="0 0 24 24"><path d="M21 3L3 10l7 3 3 7z"/></svg>Tipo de viagem</h3>
-      <label class="check"><input type="checkbox"> Praia</label>
-      <label class="check"><input type="checkbox"> Cidade</label>
-      <label class="check"><input type="checkbox"> Aventura</label>
-      <label class="check"><input type="checkbox"> Cultura</label>
-      <label class="check"><input type="checkbox"> Romântica</label>
-    </div>
-  </aside>
+  </header>
 
-  <!-- Ofertas -->
-  <div class="content">
-    <article class="card featured">
-      <div class="thumb paris"><span class="badge">OFERTA</span></div>
-      <div class="info">
-        <div class="place">
-          <svg viewBox="0 0 24 24"><path d="M12 21s7-6.200 7-12a7 7 0 10-14 0c0 5.800 7 12 7 12z"/><circle cx="12" cy="9" r="2.500"/></svg>
-          Paris, França
+  <section class="hero">
+    <div class="search-bar">
+      <div class="search-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <select>
+          <option>Qualquer Destino</option>
+          <option>Paris, França</option>
+          <option>Miami, EUA</option>
+          <option>Londres, Inglaterra</option>
+          <option>Roma, Itália</option>
+        </select>
+      </div>
+
+      <div class="search-item">
+        <i class="fa-regular fa-calendar-days"></i>
+        <input type="text" placeholder="Data / Período">
+      </div>
+
+      <div class="search-item">
+        <i class="fa-solid fa-briefcase"></i>
+        <select>
+          <option>Tipo de Viagem</option>
+          <option>Praia</option>
+          <option>Cidade</option>
+          <option>Aventura</option>
+          <option>Cultura</option>
+          <option>Romântica</option>
+        </select>
+      </div>
+
+      <button class="btn-filter"><i class="fa-solid fa-filter"></i> Filtrar</button>
+    </div>
+  </section>
+
+  <div class="main-container">
+    
+
+    <aside class="sidebar">
+      <div class="filter-group">
+        <h4><i class="fa-solid fa-tag"></i> Destaques</h4>
+        <label><input type="checkbox"> Com Desconto</label>
+        <label><input type="checkbox"> Última Chance</label>
+        <label><input type="checkbox"> Melhores Avaliações</label>
+      </div>
+
+      <div class="filter-group">
+        <h4><i class="fa-solid fa-sack-dollar"></i> Faixa de Preço</h4>
+        <label><input type="checkbox"> Até R$ 2.000</label>
+        <label><input type="checkbox"> R$ 2.001 - R$ 4.000</label>
+        <label><input type="checkbox"> R$ 4.001 - R$ 7.000</label>
+        <label><input type="checkbox"> Acima de R$ 7.000</label>
+      </div>
+
+      <div class="filter-group">
+        <h4><i class="fa-solid fa-plane-departure"></i> Tipo de Viagem</h4>
+        <label><input type="checkbox"> Praia</label>
+        <label><input type="checkbox"> Cidade</label>
+        <label><input type="checkbox"> Aventura</label>
+        <label><input type="checkbox"> Cultura</label>
+        <label><input type="checkbox"> Romântica</label>
+      </div>
+    </aside>
+
+
+    <main class="content">
+
+
+      <div class="card-featured">
+        <span class="badge-offer">Oferta</span>
+        <div class="card-featured-img">
+          <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=600" alt="Paris">
         </div>
-        <h2>Paris dos Sonhos</h2>
-        <div class="meta">
-          <span>✈ 7 dias / 6 noites</span><span>📅 Saída em mai/2025</span><span>🛏 Hotel 4 estrelas</span>
-        </div>
-        <p class="desc">Conheça a cidade do amor com um roteiro completo, incluindo principais pontos turísticos, passeios e muito mais.</p>
-        <div class="bottom">
+        <div class="featured-info">
           <div>
-            <div class="old">R$ 6.999</div>
-            <div class="price">R$ 4.999 <small>por pessoa</small></div>
+            <span class="location"><i class="fa-solid fa-location-dot"></i> Paris, França</span>
+            <h2>Paris dos Sonhos</h2>
+            <div class="details-row">
+              <span><i class="fa-regular fa-clock"></i> 7 dias / 6 noites</span>
+              <span><i class="fa-regular fa-calendar"></i> Saída em mai/2027</span>
+            </div>
+            <p class="description">Conheça Paris pelo menor preço possível, incluindo os melhores passeios pela França.</p>
           </div>
-          <button class="btn-oferta">Ver oferta →</button>
+          <div class="price-row">
+            <div class="price">R$ 4.299 <span>por pessoa</span></div>
+            <button class="btn-offer">Ver Ofertas</button>
+          </div>
         </div>
       </div>
-    </article>
 
-    <div class="grid">
-      <article class="card mini">
-        <div class="thumb rio"><span class="badge">OFERTA</span></div>
-        <div class="body">
-          <div class="place">Rio de Janeiro, Brasil</div>
-          <h4>Rio de Janeiro – Sol e Mar</h4>
-          <div class="meta"><span>✈ 5 dias / 4 noites</span><span>🛏 Hotel 3 estrelas</span></div>
-          <div class="bottom">
-            <div><div class="old">R$ 2.499</div><div class="price">R$ 1.899 <small>por pessoa</small></div></div>
-            <button class="btn-oferta">Ver oferta →</button>
+
+      <div class="cards-grid">
+        
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=400" alt="Miami">
+          <div class="card-body">
+            <span class="location"><i class="fa-solid fa-location-dot"></i> Miami, EUA</span>
+            <h3>Miami Beach</h3>
+            <div class="details-row">
+              <span><i class="fa-regular fa-clock"></i> 5 dias / 4 noites</span>
+            </div>
+            <div class="price-row">
+              <div class="price">R$ 5.200 <span>/pessoa</span></div>
+              <button class="btn-offer-sm">Ver Ofertas</button>
+            </div>
           </div>
         </div>
-      </article>
 
-      <article class="card mini">
-        <div class="thumb nova"><span class="badge">OFERTA</span></div>
-        <div class="body">
-          <div class="place">Nova York, Estados Unidos</div>
-          <h4>Nova York Inesquecível</h4>
-          <div class="meta"><span>✈ 6 dias / 5 noites</span><span>🛏 Hotel 4 estrelas</span></div>
-          <div class="bottom">
-            <div><div class="old">R$ 5.999</div><div class="price">R$ 4.299 <small>por pessoa</small></div></div>
-            <button class="btn-oferta">Ver oferta →</button>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=400" alt="Londres">
+          <div class="card-body">
+            <span class="location"><i class="fa-solid fa-location-dot"></i> Londres, Inglaterra</span>
+            <h3>Londres</h3>
+            <div class="details-row">
+              <span><i class="fa-regular fa-clock"></i> 6 dias / 5 noites</span>
+            </div>
+            <div class="price-row">
+              <div class="price">R$ 3.800 <span>/pessoa</span></div>
+              <button class="btn-offer-sm">Ver Ofertas</button>
+            </div>
           </div>
         </div>
-      </article>
 
-      <article class="card mini">
-        <div class="thumb lisboa"><span class="badge">OFERTA</span></div>
-        <div class="body">
-          <div class="place">Lisboa, Portugal</div>
-          <h4>Lisboa Histórica</h4>
-          <div class="meta"><span>✈ 5 dias / 4 noites</span><span>🛏 Hotel 3 estrelas</span></div>
-          <div class="bottom">
-            <div><div class="old">R$ 3.999</div><div class="price">R$ 2.899 <small>por pessoa</small></div></div>
-            <button class="btn-oferta">Ver oferta →</button>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=400" alt="Roma">
+          <div class="card-body">
+            <span class="location"><i class="fa-solid fa-location-dot"></i> Roma, Itália</span>
+            <h3>Roma Histórica</h3>
+            <div class="details-row">
+              <span><i class="fa-regular fa-clock"></i> 4 dias / 3 noites</span>
+            </div>
+            <div class="price-row">
+              <div class="price">R$ 4.800 <span>/pessoa</span></div>
+              <button class="btn-offer-sm">Ver Ofertas</button>
+            </div>
           </div>
         </div>
-      </article>
 
-      <article class="card mini">
-        <div class="thumb maldivas"><span class="badge">OFERTA</span></div>
-        <div class="body">
-          <div class="place">Maldivas</div>
-          <h4>Paraíso nas Maldivas</h4>
-          <div class="meta"><span>✈ 7 dias / 6 noites</span><span>🛏 Resort 5 estrelas</span></div>
-          <div class="bottom">
-            <div><div class="old">R$ 8.999</div><div class="price">R$ 6.499 <small>por pessoa</small></div></div>
-            <button class="btn-oferta">Ver oferta →</button>
-          </div>
-        </div>
-      </article>
+      </div>
+    </main>
 
-      <article class="card mini">
-        <div class="thumb toquio"><span class="badge">OFERTA</span></div>
-        <div class="body">
-          <div class="place">Tóquio, Japão</div>
-          <h4>Tóquio: Tradição e Futuro</h4>
-          <div class="meta"><span>✈ 7 dias / 6 noites</span><span>🛏 Hotel 4 estrelas</span></div>
-          <div class="bottom">
-            <div><div class="old">R$ 7.499</div><div class="price">R$ 5.799 <small>por pessoa</small></div></div>
-            <button class="btn-oferta">Ver oferta →</button>
-          </div>
-        </div>
-      </article>
-    </div>
   </div>
-</main>
 
 </body>
 </html>
